@@ -1,0 +1,163 @@
+:root {
+  /* Color */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-family-primary: "Fraunces", serif;
+  --font-family-second: "Montserrat", sans-serif;
+  --font-width--normal: 500;
+  --font-width--bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* * {
+  border: 1px solid red;
+} */
+/* General styling*/
+body {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-width--normal);
+  font-size: 0.875rem;
+  background-color: var(--cream);
+  color: var(--dark-grayish-blue);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 1.75rem 1rem;
+}
+/* Card styling*/
+
+.card__price {
+  display: flex;
+  gap: 1.19rem;
+  margin-bottom: 1.25rem;
+}
+.card {
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+}
+.card__image img {
+  height: 100%;
+}
+.card__content {
+  padding: 1.5rem;
+}
+.card__category {
+  font-family: var(--font-family-second);
+  font-weight: var(--font-width--normal);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 0.3125rem;
+  margin-bottom: 0.75rem;
+}
+.card__title {
+  font-size: 2rem;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-width--bold);
+  color: var(--very-dark-blue);
+  margin-bottom: 1rem;
+}
+
+.card__description {
+  font-size: 0.875rem;
+  font-family: var(--font-family-second);
+  font-weight: var(--font-width--normal);
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1.5rem;
+}
+.card__price__new {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+}
+.card__price__old {
+  margin: auto 0;
+  font-size: 0.8125rem;
+  text-decoration: Line-through;
+}
+.card__button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-family: var(--font-family-second);
+  font-weight: var(--font-width--bold);
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  display: inline-flex;
+  padding: 1rem 5.75rem;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.72594rem;
+}
+.card__button svg {
+  font-family: var(--font-family-second);
+}
+.card__button:is(:hover, :focus) {
+  background-color: #1a4032;
+}
